@@ -26,7 +26,7 @@ const WeatherApp = (props) => {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        axios.get(`http://api.ipstack.com/check?access_key=${process.env.REACT_APP_IPSTACK_APIKEY}`)
+        axios.get(`https://api.ipstack.com/check?access_key=${process.env.REACT_APP_IPSTACK_APIKEY}`)
             .then(res => getWoeid(res.data.latitude, res.data.longitude))
             .catch(error => console.log(error))
     }, [])
@@ -52,7 +52,7 @@ const WeatherApp = (props) => {
     }
 
     const handleCurrentLocationClick = async () => {
-        await axios.get(`http://api.ipstack.com/check?access_key=${process.env.REACT_APP_IPSTACK_APIKEY}`)
+        await axios.get(`https://api.ipstack.com/check?access_key=${process.env.REACT_APP_IPSTACK_APIKEY}`)
             .then(res => getWoeid(res.data.latitude, res.data.longitude))
             .catch(error => console.log(error))
     }
