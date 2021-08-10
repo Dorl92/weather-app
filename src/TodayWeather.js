@@ -15,7 +15,7 @@ const styles = {
         flexDirection: "column",
         justifyContent: "space-between",
         width: "25%",
-        height: "fit-content",
+        height: "100vh",
         backgroundColor: "#1E213A",
         animation: "$slide 1s",
         [sizes.down("xl")]: {
@@ -23,6 +23,7 @@ const styles = {
         },
         [sizes.down("md")]: {
             width: "100%",
+            height: "fit-content",
         },
     },
     containerTop: {

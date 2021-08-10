@@ -17,7 +17,9 @@ const styles = {
         color: "white",
         fontSize: "16px",
         [sizes.down("md")]: {
-            marginTop: "1rem"
+            marginTop: "1rem",
+            marginLeft: props => props.tomorrow ? "0rem" : "0rem",
+            marginRight: "1rem"
         },
     },
     title: {
